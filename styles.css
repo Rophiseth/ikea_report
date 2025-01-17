@@ -1,0 +1,529 @@
+/* ==================================================
+   FONT IKEA SU TUTTO IL BODY (TUTTI I CONTENUTI DELLA PAGINA)
+   ================================================== */
+@font-face {
+    font-family: 'Noto IKEA Latin Regular';
+    src: url('assets/noto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Noto IKEA Latin Regular', Arial, sans-serif;
+}
+
+.ikea-blue {
+  color: #0057AD;
+	}
+
+.ikea-yellow {
+  color: #FBDA0C;
+}
+
+.text-black {
+  color: black;
+}
+
+/* ==================================================
+   CONTENUTO DELL'HEADER
+   ================================================== */
+.bg-primary {
+    background-color: #0057AD !important; /* colore blu IKEA */
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.btn-shopping {
+    background-color: #FBDA0C; /* colore giallo IKEA */
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none; /* rimuove la sottolineatura del link al pulsante go shopping */
+}
+.btn-shopping:hover {
+    background-color: #FFD700; /* viene inserita una tonalità leggermente diversa di giallo quando si passa sopra il pulsante*/
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+.btn-shopping .circle {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    height: 40px; /* altezza del logo */
+}
+
+/* ==================================================
+   CONTAINER SOSTENIBILITÀ - BLOCCO 1
+   ================================================== */
+.sustainability-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+.sustainability-container header h1 {
+    margin-top: 60px;
+    font-size: 3.1rem;
+    font-weight: 1000;
+    color: #000;
+    margin-bottom: 60px;
+}
+.sustainability-container p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+.sustainability-hr hr {
+    width: 1000px;
+    margin: auto;
+}
+
+/* ==================================================
+   IMMAGINE HOMEPAGE CONTAINER - BLOCCO 2
+   ================================================== */
+.imagehp-container {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.imagehp-container img {
+    border-radius: 20px;
+    width: 1000px;
+    opacity: 0.8; /*aggiunge una leggera opacità all'immagine*/
+}
+
+/* ==================================================
+   CONTAINER REPORT - BLOCCO 3
+   ================================================== */
+.report-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+.report-container header h1 {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+}
+.report-container p {
+    font-size: 1.0rem;
+    color: #333;
+    line-height: 1.6;
+}
+.report-hr hr {
+    width: 1000px;
+    margin: auto;
+}
+
+/* ==================================================
+   TIMELINE CONTAINER - BLOCCO 4
+   ================================================== */
+.timeline-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    border-bottom: 3px solid #0057AD;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.timeline ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.year-button {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #555;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    text-align: center;
+}
+.year-button.active {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 2px solid #FBDA0C;
+}
+.year-button:hover {
+    color: #0057AD;
+}
+.timeline-text-container {
+    margin-top: 20px;
+    text-align: center;
+    display: none; /* tutti i contenuti vengono nascosti per default */
+}
+.timeline-text-container.active {
+    display: block; /* mostra il contenitore attivo */
+}
+.timeline-text-container h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+}
+.timeline-text-container p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+.timeline-text-container .pdf-info {
+    font-size: 0.9rem;
+    color: #555;
+    display: inline-block;
+    margin-right: 10px;
+}
+.timeline-text-container .pdf-download {
+    color: #0057AD;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 70px;
+}
+.timeline-text-container .pdf-download:hover {
+    text-decoration: underline;
+}
+.timeline-text-container .download-icon {
+    font-size: 1rem;
+    color: #FBDA0C;
+}
+
+/* ==================================================
+   IMMAGINE DOPO LA TIMELINE - BLOCCO 5
+   ================================================== */
+.after-timeline-container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+.after-timeline-container img {
+    border-radius: 20px;
+    width: 800px;
+    opacity: 0.8;
+    margin-bottom: 70px;
+}
+
+/* ==================================================
+   BLOCCHI INFORMATIVI CON ANIMAZIONE - BLOCCO 6
+   ================================================== */
+.info-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 50px auto;
+    margin-bottom: 100px;
+}
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.info-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.info-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+}
+.info-content {
+    flex: 1;
+}
+.info-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+.info-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+.info-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #D72638;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.info-link:hover {
+    text-decoration: underline;
+}
+.info-link .arrow {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ==================================================
+   CONSIGLI PER LA SOSTENIBILITÀ - BLOCCO 7
+   ================================================== */
+.sustainability-advice {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+.sustainability-advice h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+}
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.advice-item {
+    text-align: center;
+}
+.advice-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.advice-image:hover {
+    transform: scale(1.05);
+}
+.advice-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* ==================================================
+   FOOTER - BLOCCO 8
+   ================================================== */
+.footer {
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    margin-top: 30px;
+}
+.footer-logo {
+    height: 150px;
+    max-width: 100%;
+}
+.vertical-line {
+    border-left: 3px solid black;
+    height: 60px;
+    margin: 0;
+}
+.footer-text-lines p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: black;
+}
+.footer-text p {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* ==================================================
+   REGOLE GLOBALI E MEDIA QUERY PER RESPONSIVITA'
+   tramite queste regole viene definito come la pagina
+   deve adattarsi nel caso delle varie risoluzioni
+   dei dispositivi piu comuni (PC, tablet, smartphone)
+   ================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+img {
+    max-width: 100%; /* per non far deformare immagini in caso di dispositivi piccoli */
+    height: auto; 
+}
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    .footer-logo {
+        height: 100px;
+        justify-content: center;
+    }
+    .btn-shopping {
+        padding: 8px 16px;
+    }
+    .footer-text p {
+        font-size: 0.85rem;
+        justify-content: center;
+    }
+    .logo {
+        justify-content: center;
+    }
+    .advice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    header,
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .btn-shopping {
+        width: 50%;
+        justify-content: center;
+    }
+    .footer-logo {
+        height: 80px;
+        justify-content: center;
+    }
+    .footer-text-lines p {
+        font-size: 0.8rem;
+    }
+    .logo {
+        justify-content: center;
+    }
+    .sustainability-container header h1,
+    .report-container header h1 {
+        font-size: 2rem;
+    }
+    .sustainability-container p,
+    .report-container p {
+        font-size: 1rem;
+    }
+    .timeline-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .timeline-container .year-button {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+    .timeline-text-container h3 {
+        font-size: 1rem;
+    }
+    .timeline-text-container p,
+    .timeline-text-container .pdf-info {
+        font-size: 0.85rem;
+    }
+    .timeline-text-container .pdf-download {
+        font-size: 0.9rem;
+    }
+    .info-blocks {
+        gap: 30px;
+    }
+    .info-number {
+        font-size: 2.5rem;
+    }
+    .info-content h3 {
+        font-size: 1.3rem;
+    }
+    .info-content p,
+    .info-link {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+    .footer-logo {
+        height: 60px;
+        justify-content: center;
+    }
+    .footer-text p {
+        font-size: 0.85rem;
+        justify-content: center;
+    }
+    .logo {
+        justify-content: center;
+    }
+    .vertical-line {
+        display: none;
+    }
+    .sustainability-container,
+    .report-container {
+        padding: 10px;
+    }
+    .sustainability-container header h1,
+    .report-container header h1 {
+        font-size: 1.8rem;
+    }
+    .sustainability-container p,
+    .report-container p {
+        font-size: 0.9rem;
+    }
+    .advice-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-number {
+        font-size: 2rem;
+    }
+    .info-content h3 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina web per il download dei report di sostenibilità IKEA.">
+  <title>IKEA - Report di sostenibilità</title>
+  <!-- Rif. Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Riferimento al foglio di stile -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="bg-primary text-white d-flex align-items-center justify-content-between px-3">
+    <!-- inserimento del logo IKEA -->
+    <div>
+      <img src="assets/ikea.svg" alt="Logo IKEA" class="logo" aria-label="Logo IKEA">
+    </div>
+    <!-- inserimento pulsante Go Shopping che rimanda al sito IKEA Italia se cliccato-->
+    <a href="https://www.ikea.com/it/it/" target="_blank" 
+       class="btn btn-shopping d-flex align-items-center" 
+       role="button" aria-label="Vai al sito IKEA">
+      <span>Go Shopping</span>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" 
+             class="bi bi-arrow-right" viewBox="0 0 16 16" role="img" aria-label="Freccia a destra">
+          <!-- tracciato SVG che disegna una freccia rivolta a destra-->
+		  <path fill-rule="evenodd" d="M10.828 8l-4.95 4.95a.5.5 0 1 1-.708-.708L9.414 8 5.17 3.758a.5.5 0 0 1 
+               .708-.707l4.95 4.95a.5.5 0 0 1 0 .708z"/>
+        </svg>
+      </div>
+    </a>
+  </header>
+
+  <main>
+    <!-- Sezione 1: introduzione -->
+    <section class="sustainability-container">
+      <header>
+        <!-- Titolo principale della pagina ad alto impatto (h1) -->
+        <h1>La strategia di sostenibilità IKEA</h1>
+      </header>
+      <p>
+	 <!-- sottotitolo -->
+        <span class="ikea-blue"><strong>Abbiamo grandi obiettivi per il 2030.</strong></span>
+      </p>
+      <p>
+        Ci impegniamo a fare la nostra parte per contrastare il cambiamento climatico, 
+        il consumo non sostenibile e l'ineguaglianza. Le nostre tre aree di interesse principali sono: 
+        vita sana e sostenibile, circolarità e impatto positivo sul clima, equità e uguaglianza.
+        Per affrontare le sfide del consumo non sostenibile, del cambiamento climatico e della crescente disuguaglianza, 
+        stiamo compiendo passi ambiziosi verso un futuro più sostenibile attraverso la collaborazione con partner, 
+        colleghi e clienti.
+      </p>
+    </section>
+
+    <!-- Separatore linea orizzontale sotto la sezione 1 -->
+    <section class="sustainability-hr">
+      <hr>
+    </section>
+
+    <!-- Sezione immagine centrale -->
+    <section class="imagehp-container">
+      <img src="assets/centrale_homepage.png" alt="Immagine che rappresenta un cartellone pubblicitario IKEA che sensibilizza al riciclo del mobilio">
+    </section>
+
+    <!-- Separatore linea orizzontale sotto l'immagine del cartellone pubblicitario -->
+    <section class="sustainability-hr">
+      <hr>
+    </section>
+
+    <!-- Sezione 2: consulta i report di sostenibilità -->
+    <section class="report-container">
+      <header>
+        <!-- Sottotitolo di livello 2 (h2) -->
+        <h2>Consulta i nostri report di sostenibilità</h2>
+      </header>
+      <p>
+        Il Report di Sostenibilità di IKEA Italia Retail risponde all’obiettivo di condividere con 
+        tutti gli stakeholder il nostro impegno per costruire una società migliore. 
+        Con questo strumento vogliamo presentare in modo chiaro e trasparente le iniziative chiave 
+        e i risultati più rappresentativi della nostra strategia People & Planet Positive. 
+        Non è il punto di arrivo, ma piuttosto un punto di partenza per gli anni a venire, 
+        con l’ambizione di migliorarci sempre.
+      </p>
+    </section>
+
+    <!-- qui vengono definiti gli anni che andranno a popolare la timeline. questi valori verranno recuperati
+         dal javascript attraverso la funzione "const yearButtons = document.querySelectorAll('.year-button');" 	-->
+    <section class="timeline-container">
+      <nav class="timeline" aria-label="Selezione anno">
+        <ul>
+          <li><button class="year-button active" data-year="2023">2023</button></li>
+          <li><button class="year-button" data-year="2022">2022</button></li>
+          <li><button class="year-button" data-year="2021">2021</button></li>
+          <li><button class="year-button" data-year="2020">2020</button></li>
+        </ul>
+      </nav>
+    </section>
+
+     <!-- qui vengono definiti i testi che andranno a popolare gli anni della timeline. questi valori verranno recuperati
+         dal javascript attraverso la funzione "const yearContents = document.querySelectorAll('.timeline-text-container');" 	
+		 
+		 in questo caso  solo l'anno 2023 avrà l'attributo "active" perché è l'anno che dev'essere mostrato di default appena si visita la pagina -->
+    <section class="timeline-text-container active" data-year="2023">
+      <!-- Sottotitolo di livello 3 (h3) -->
+      <h3>Scarica il nostro Report di sostenibilità per l'anno fiscale 2023</h3>
+      <p>
+        <span class="pdf-info">PDF</span>
+		 <!-- al click viene aperto in una nuova pagina il PDF del report di sostenibilità dell'anno scelto.  -->
+        <a href="assets/report2023.pdf" class="pdf-download" target="_blank" aria-label="Scarica il PDF del Report di Sostenibilità 2023">
+          Scarica <span class="download-icon">⬇</span>
+        </a>
+      </p>
+    </section>
+
+    <!-- Contenuti timeline 2022 -->
+    <section class="timeline-text-container" data-year="2022">
+      <h3>Scarica il nostro Report di sostenibilità per l'anno fiscale 2022</h3>
+      <p>
+        <span class="pdf-info">PDF</span>
+        <a href="assets/report2022.pdf" class="pdf-download" target="_blank" aria-label="Scarica il PDF del Report di Sostenibilità 2022">
+          Scarica <span class="download-icon">⬇</span>
+        </a>
+      </p>
+    </section>
+
+    <!-- Contenuti timeline 2021 -->
+    <section class="timeline-text-container" data-year="2021">
+      <h3>Scarica il nostro Report di sostenibilità per l'anno fiscale 2021</h3>
+      <p>
+        <span class="pdf-info">PDF</span>
+        <a href="assets/report2021.pdf" class="pdf-download" target="_blank" aria-label="Scarica il PDF del Report di Sostenibilità 2021">
+          Scarica <span class="download-icon">⬇</span>
+        </a>
+      </p>
+    </section>
+
+    <!-- Contenuti timeline 2020 -->
+    <section class="timeline-text-container" data-year="2020">
+      <h3>Scarica il nostro Report di sostenibilità per l'anno fiscale 2020</h3>
+      <p>
+        <span class="pdf-info">PDF</span>
+        <a href="assets/report2020.pdf" class="pdf-download" target="_blank" aria-label="Scarica il PDF del Report di Sostenibilità 2020">
+          Scarica <span class="download-icon">⬇</span>
+        </a>
+      </p>
+    </section>
+
+    <!-- Immagine dopo la timeline -->
+    <section class="after-timeline-container">
+      <img src="assets/2023.png" alt="Immagine di un tetto di un negozio IKEA tappezzato di pannelli solari">
+    </section>
+
+    <!-- Info blocks sugli anni (storico sostenibilità) l'effetto transition è gestito da javascript e CSS e spiegato nel rapporto -->
+    <section class="info-blocks">
+      <!-- 2023 -->
+      <div class="info-block">
+        <div class="info-number">2023<span class="ikea-yellow">.</span></div>
+        <div class="info-content">
+          <h3>La strategia People & Planet Positive di IKEA</h3>
+          <p>
+            Vogliamo contribuire a generare un impatto positivo sulle persone e sul pianeta, migliorando 
+            la nostra Azienda e facendo la nostra parte per offrire 
+            un futuro migliore alle nuove generazioni. 
+            Per farlo, abbiamo un piano: la nostra strategia People & Planet Positive, pensata in linea 
+            con gli Obiettivi di Sviluppo Sostenibile (SDGs) 2030 delle Nazioni Unite che ispira 
+            e guida ciascuno di noi nei processi decisionali e nella definizione degli obiettivi, 
+            al fine di poter attuare insieme i grandi cambiamenti che vogliamo vedere nell’intero ecosistema 
+            IKEA e nel mondo. Questo piano ci indica la strada da seguire e delinea un programma solido e comune 
+            nel lungo termine, con l’obiettivo principale di bilanciare la crescita economica di IKEA con un impatto 
+            sociale positivo e con la tutela e la rigenerazione dell’ambiente.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="info-block">
+        <div class="info-number">2022<span class="ikea-yellow">.</span></div>
+        <div class="info-content">
+          <h3>Una casa per i rifugiati in fuga dalla guerra</h3>
+          <p>
+            Durante l’anno fiscale 2022, per fare la nostra parte di fronte alla guerra e alla crisi umanitaria 
+            che ha colpito l’Ucraina, abbiamo deciso di dedicare molti dei progetti di “Un posto da chiamare casa” 
+            ad accogliere le tante persone in fuga dal Paese. In tutto, sono 15 i progetti realizzati 
+            in diverse regioni: solo in Lombardia, Emilia-Romagna e Lazio, a un mese dall’inizio dell’emergenza 
+            circa 300 persone ne avevano già potuto beneficiare. Tra le iniziative realizzate c’è il “Second life building”, 
+            un luogo sicuro pensato per accogliere persone in difficoltà e supportarle nell’intraprendere un percorso 
+            di rinascita.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="info-block">
+        <div class="info-number">2021<span class="ikea-yellow">.</span></div>
+        <div class="info-content">
+          <h3>Trasformarsi in un'azienda circolare</h3>
+          <p>
+            La nostra ambizione è diventare un'azienda circolare entro il 2030. 
+            Ci impegniamo a progettare tutti i nostri prodotti con caratteristiche circolari. 
+            Puntiamo a utilizzare esclusivamente materiali rinnovabili o riciclati e a fornire 
+            nuove soluzioni ai nostri clienti per prolungare la vita dei prodotti e dei materiali. 
+            Progettiamo ogni prodotto fin dall'inizio affinché possa essere riutilizzato, rigenerato, 
+            ricondizionato e, infine – solo dopo aver esplorato tutte le altre possibilità – riciclato, 
+            applicando i principi del design circolare durante il processo di sviluppo del prodotto. 
+            Puntiamo a utilizzare esclusivamente materiali rinnovabili o riciclati, adattandoci, 
+            trovando nuove fonti e sviluppando nuovi materiali.
+            Assumiamo un ruolo guida e collaboriamo con altri attraverso attività di sensibilizzazione, 
+            partnership commerciali e collaborazioni.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div class="info-block">
+        <div class="info-number">2020<span class="ikea-yellow">.</span></div>
+        <div class="info-content">
+          <h3>Finanziamenti ai fornitori durante la pandemia</h3>
+          <p>
+            Il Gruppo Inter IKEA ha fornito supporto finanziario a diversi fornitori esterni di IKEA per mantenerli 
+            finanziariamente stabili durante la pandemia.
+            Inoltre, il franchisee di IKEA, Ingka Group, ha annunciato un fondo di emergenza di 26 milioni di euro, 
+            permettendo di intraprendere azioni nelle comunità locali. 
+            Naturalmente, permangono significative incertezze. Sappiamo che l'attuale livello di crisi passerà, 
+            ma sappiamo anche che gli impatti della pandemia si faranno sentire per molti anni a venire, influenzando 
+            il modo in cui lavoriamo e interagiamo con gli altri. Continueremo ad adattare le nostre routine e i nostri 
+            metodi di lavoro per garantire la salute e il benessere di tutte le persone nella nostra catena del valore e 
+            nelle comunità in cui operiamo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione suggerimenti per una vita sostenibile -->
+    <section class="sustainability-advice">
+      <header>
+        <!-- sottotitolo (h2) -->
+        <h2>Suggerimenti per una vita sostenibile</h2>
+      </header>
+      <div class="advice-grid">
+        <div class="advice-item">
+          <img src="assets/cibo.jpg" alt="Immagine di alimenti ikea a base vegetale" class="advice-image">
+          <p class="advice-name">Scegli cibi migliori</p>
+          Alimentarsi con prodotti a base vegetale è una delle azioni più significative che 
+          una persona possa intraprendere per ridurre la propria impronta climatica.
+        </div>
+        <div class="advice-item">
+          <img src="assets/acqua.jpg" alt="Immagine di un rubinetto con acqua aperta" class="advice-image">
+          <p class="advice-name">Usa meno acqua</p>
+          Cambiando le tue abitudini domestiche, puoi risparmiare ogni giorno molti litri di 
+          preziosa acqua potabile. Usa un rompigetto per ridurre il flusso d'acqua.
+        </div>
+        <div class="advice-item">
+          <img src="assets/prodotti.jpg" alt="Immagine di mobilio ikea vario" class="advice-image">
+          <p class="advice-name">Se puoi, riparalo</p>
+          Una piccola riparazione o una semplice regolazione potrebbe 
+          essere sufficiente per rimettere in sesto una sedia, un tavolo o un divano traballante.
+        </div>
+        <div class="advice-item">
+          <img src="assets/rifiuti.jpg" alt="Immagine di contenitori per rifiuti differenziati" class="advice-image">
+          <p class="advice-name">Riduci i rifiuti</p>
+          Per quanto si possa fare attenzione, produrre una certa quantità di rifiuti domestici è 
+          inevitabile; tuttavia, esistono alcuni modi semplici 
+          per riutilizzare ciò che hai.
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- inizio footer -->
+  <footer class="footer">
+    <!-- logo Uni Pegaso -->
+    <div class="footer-logo-container d-flex align-items-center gap-3">
+      <img src="assets/pegaso.svg" alt="Logo Università Pegaso" class="footer-logo" loading="lazy" aria-label="Logo Università Pegaso">
+      <!-- linea verticale di separazione e testo -->
+      <div class="footer-divider">
+        <hr class="vertical-line">
+      </div>
+      <div class="footer-text-lines">
+        <p>Elaborato finale - Project Work - Corso di Laurea in L-31</p>
+        <p>Traccia 3.1: Sviluppo di una pagina web per il download dei report di sostenibilità di un’impresa del settore terziario</p>
+        <p>Luca Sipone</p>
+        <p>Matricola 0312201296</p>
+      </div>
+    </div>
+	<!-- disclaimer -->
+    <div class="footer-text">
+      <p>
+        <span class="text-black">
+          Questa pagina web è un progetto universitario per l'elaborato finale di Luca Sipone e 
+          non è da ritenersi in alcun modo associata alla società IKEA Italia Retail S.r.l.
+        </span>
+      </p>
+    </div>
+  </footer>
+  <!-- riferimento al file javascript che contiene gli script della timeline 
+  e l'effetto grafico per gli info-block -->
+  <script src="script.js"></script>
+</body>
+</html>
